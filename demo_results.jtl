@@ -1,0 +1,25 @@
+timeStamp,elapsed,label,responseCode,responseMessage,threadName,dataType,success,failureMessage,bytes,sentBytes,grpThreads,allThreads,URL,Latency,IdleTime,Connect
+1733237400000,245,HomePage,200,OK,Thread Group 1-1,text,true,,1523,456,2,2,https://example.com/,234,0,45
+1733237400500,312,HomePage,200,OK,Thread Group 1-2,text,true,,1523,456,2,2,https://example.com/,298,0,52
+1733237401000,189,HomePage,200,OK,Thread Group 1-1,text,true,,1523,456,2,2,https://example.com/,175,0,38
+1733237401500,456,HomePage,200,OK,Thread Group 1-2,text,true,,1523,456,2,2,https://example.com/,442,0,67
+1733237402000,223,HomePage,200,OK,Thread Group 1-1,text,true,,1523,456,2,2,https://example.com/,210,0,41
+1733237402500,334,HomePage,200,OK,Thread Group 1-2,text,true,,1523,456,2,2,https://example.com/,320,0,55
+1733237403000,198,HomePage,200,OK,Thread Group 1-1,text,true,,1523,456,2,2,https://example.com/,185,0,39
+1733237403500,287,HomePage,200,OK,Thread Group 1-2,text,true,,1523,456,2,2,https://example.com/,273,0,48
+1733237404000,234,API_GetUser,200,OK,Thread Group 1-1,text,true,,2456,512,2,2,https://example.com/api/user,220,0,42
+1733237404500,567,API_GetUser,200,OK,Thread Group 1-2,text,true,,2456,512,2,2,https://example.com/api/user,553,0,78
+1733237405000,345,API_GetUser,200,OK,Thread Group 1-1,text,true,,2456,512,2,2,https://example.com/api/user,331,0,58
+1733237405500,423,API_GetUser,200,OK,Thread Group 1-2,text,true,,2456,512,2,2,https://example.com/api/user,409,0,65
+1733237406000,289,API_GetUser,200,OK,Thread Group 1-1,text,true,,2456,512,2,2,https://example.com/api/user,275,0,49
+1733237406500,512,API_GetUser,200,OK,Thread Group 1-2,text,true,,2456,512,2,2,https://example.com/api/user,498,0,72
+1733237407000,156,API_GetOrders,200,OK,Thread Group 1-1,text,true,,3421,567,2,2,https://example.com/api/orders,142,0,32
+1733237407500,234,API_GetOrders,200,OK,Thread Group 1-2,text,true,,3421,567,2,2,https://example.com/api/orders,220,0,44
+1733237408000,178,API_GetOrders,200,OK,Thread Group 1-1,text,true,,3421,567,2,2,https://example.com/api/orders,164,0,35
+1733237408500,267,API_GetOrders,200,OK,Thread Group 1-2,text,true,,3421,567,2,2,https://example.com/api/orders,253,0,47
+1733237409000,892,API_Checkout,500,Internal Server Error,Thread Group 1-1,text,false,Server error,234,678,2,2,https://example.com/api/checkout,878,0,95
+1733237409500,1234,API_Checkout,200,OK,Thread Group 1-2,text,true,,5678,678,2,2,https://example.com/api/checkout,1220,0,112
+1733237410000,945,API_Checkout,200,OK,Thread Group 1-1,text,true,,5678,678,2,2,https://example.com/api/checkout,931,0,98
+1733237410500,1123,API_Checkout,200,OK,Thread Group 1-2,text,true,,5678,678,2,2,https://example.com/api/checkout,1109,0,105
+1733237411000,876,API_Checkout,200,OK,Thread Group 1-1,text,true,,5678,678,2,2,https://example.com/api/checkout,862,0,92
+1733237411500,1045,API_Checkout,200,OK,Thread Group 1-2,text,true,,5678,678,2,2,https://example.com/api/checkout,1031,0,101

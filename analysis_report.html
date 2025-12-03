@@ -1,0 +1,199 @@
+
+        <!DOCTYPE html>
+        <html>
+        <head>
+            <title>JMeter Test Results Analysis</title>
+            <style>
+                body { font-family: Arial, sans-serif; margin: 20px; }
+                h1, h2, h3 { color: #333; }
+                table { border-collapse: collapse; width: 100%; margin-bottom: 20px; }
+                th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
+                th { background-color: #f2f2f2; }
+                tr:nth-child(even) { background-color: #f9f9f9; }
+                .chart { margin: 20px 0; max-width: 100%; }
+                .section { margin-bottom: 30px; }
+                .severity-high { color: #d9534f; }
+                .severity-medium { color: #f0ad4e; }
+                .severity-low { color: #5bc0de; }
+            </style>
+        </head>
+        <body>
+            <h1>JMeter Test Results Analysis</h1>
+            
+            <div class="section">
+                <h2>Summary</h2>
+                <table>
+                    <tr><th>Metric</th><th>Value</th></tr>
+                    <tr><td>Total Samples</td><td>24</td></tr>
+                    <tr><td>Error Count</td><td>1</td></tr>
+                    <tr><td>Error Rate</td><td>4.17%</td></tr>
+                    <tr><td>Average Response Time</td><td>481.83 ms</td></tr>
+                    <tr><td>Median Response Time</td><td>323.00 ms</td></tr>
+                    <tr><td>90th Percentile</td><td>1015.00 ms</td></tr>
+                    <tr><td>95th Percentile</td><td>1111.30 ms</td></tr>
+                    <tr><td>99th Percentile</td><td>1208.47 ms</td></tr>
+                    <tr><td>Min Response Time</td><td>156.00 ms</td></tr>
+                    <tr><td>Max Response Time</td><td>1234.00 ms</td></tr>
+                    <tr><td>Throughput</td><td>2.09 requests/second</td></tr>
+                    <tr><td>Start Time</td><td>2024-12-03 19:50:00</td></tr>
+                    <tr><td>End Time</td><td>2024-12-03 19:50:11.500000</td></tr>
+                    <tr><td>Duration</td><td>11.50 seconds</td></tr>
+                </table>
+            </div>
+        
+                <div class="section">
+                    <h2>Endpoint Analysis</h2>
+                    <table>
+                        <tr>
+                            <th>Endpoint</th>
+                            <th>Samples</th>
+                            <th>Errors</th>
+                            <th>Error Rate</th>
+                            <th>Avg Response Time</th>
+                            <th>95th Percentile</th>
+                            <th>Throughput</th>
+                        </tr>
+                
+                        <tr>
+                            <td>HomePage</td>
+                            <td>8</td>
+                            <td>0</td>
+                            <td>0.00%</td>
+                            <td>280.50 ms</td>
+                            <td>413.30 ms</td>
+                            <td>2.29 req/s</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>API_GetUser</td>
+                            <td>6</td>
+                            <td>0</td>
+                            <td>0.00%</td>
+                            <td>395.00 ms</td>
+                            <td>553.25 ms</td>
+                            <td>2.40 req/s</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>API_GetOrders</td>
+                            <td>4</td>
+                            <td>0</td>
+                            <td>0.00%</td>
+                            <td>208.75 ms</td>
+                            <td>262.05 ms</td>
+                            <td>2.67 req/s</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>API_Checkout</td>
+                            <td>6</td>
+                            <td>1</td>
+                            <td>16.67%</td>
+                            <td>1019.17 ms</td>
+                            <td>1206.25 ms</td>
+                            <td>2.40 req/s</td>
+                        </tr>
+                    
+                    </table>
+                </div>
+                
+                <div class="section">
+                    <h2>Bottleneck Analysis</h2>
+                
+                    <h3>Slow Endpoints</h3>
+                    <table>
+                        <tr>
+                            <th>Endpoint</th>
+                            <th>Response Time</th>
+                            <th>Threshold</th>
+                            <th>Severity</th>
+                        </tr>
+                    
+                            <tr>
+                                <td>API_Checkout</td>
+                                <td>1206.25 ms</td>
+                                <td>713.78 ms</td>
+                                <td class="severity-medium">MEDIUM</td>
+                            </tr>
+                        
+                    </table>
+                    
+                    <h3>Error-Prone Endpoints</h3>
+                    <table>
+                        <tr>
+                            <th>Endpoint</th>
+                            <th>Error Rate</th>
+                            <th>Threshold</th>
+                            <th>Severity</th>
+                        </tr>
+                    
+                            <tr>
+                                <td>API_Checkout</td>
+                                <td>16.67%</td>
+                                <td>1.00%</td>
+                                <td class="severity-high">HIGH</td>
+                            </tr>
+                        
+                    </table>
+                    
+                </div>
+                
+                <div class="section">
+                    <h2>Insights and Recommendations</h2>
+                
+                    <h3>Recommendations</h3>
+                    <table>
+                        <tr>
+                            <th>Priority</th>
+                            <th>Issue</th>
+                            <th>Recommendation</th>
+                            <th>Expected Impact</th>
+                        </tr>
+                    
+                            <tr>
+                                <td class="severity-high">HIGH</td>
+                                <td>Moderate response time issues in endpoints: API_Checkout</td>
+                                <td>Profile the code to identify bottlenecks and optimize the most expensive operations</td>
+                                <td>Moderate improvement in response times</td>
+                            </tr>
+                        
+                            <tr>
+                                <td class="severity-high">HIGH</td>
+                                <td>High error rates in endpoints: API_Checkout</td>
+                                <td>Investigate error logs, add proper error handling, and fix the root causes of errors</td>
+                                <td>Significant reduction in error rates and improved reliability</td>
+                            </tr>
+                        
+                            <tr>
+                                <td class="severity-high">HIGH</td>
+                                <td>Server errors (1 occurrences)</td>
+                                <td>Check server logs, fix application bugs, and add proper error handling</td>
+                                <td>Reduction in server errors and improved reliability</td>
+                            </tr>
+                        
+                    </table>
+                    
+                    <h3>Scaling Insights</h3>
+                    <table>
+                        <tr>
+                            <th>Topic</th>
+                            <th>Description</th>
+                        </tr>
+                    
+                            <tr>
+                                <td>No Correlation with Concurrency</td>
+                                <td>There is little to no correlation between the number of concurrent users and response times, suggesting good scalability</td>
+                            </tr>
+                        
+                            <tr>
+                                <td>No Performance Degradation Detected</td>
+                                <td>No significant performance degradation was detected with increasing concurrent users within the tested range</td>
+                            </tr>
+                        
+                    </table>
+                    
+                </div>
+                
+        </body>
+        </html>
+        
