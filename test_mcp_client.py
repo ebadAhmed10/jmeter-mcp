@@ -13,7 +13,7 @@ async def test_jmeter_mcp():
     # Server parameters - using uv to run the server
     server_params = StdioServerParameters(
         command="uv",
-        args=["--directory", "/home/ebad/jmeter-mcp-server", "run", "jmeter_server.py"],
+        args=["--directory", "/home/ebad/jmeter-mcp", "run", "jmeter_server.py"],
         env=None
     )
     

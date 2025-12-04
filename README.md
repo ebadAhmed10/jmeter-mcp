@@ -40,10 +40,10 @@ This is a Model Context Protocol (MCP) server that allows executing JMeter tests
 chmod +x /path/to/jmeter/bin/jmeter
 ```
 
-3. Install required Python dependencies:
+3. Install dependencies and run the server:
 
 ```bash
-pip install numpy matplotlib
+uv sync
 ```
 
 4. Configure the `.env` file, refer to the `.env.example` file for details.
@@ -87,7 +87,7 @@ Add the following configuration to your MCP client config:
 {
     "mcpServers": {
       "jmeter": {
-        "command": "/path/to/uv",
+        "command": "uv",
         "args": [
           "--directory",
           "/path/to/jmeter-mcp-server",
